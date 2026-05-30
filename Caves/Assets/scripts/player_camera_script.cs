@@ -6,9 +6,15 @@ using UnityEngine.InputSystem;
 public class player_camera_script : MonoBehaviour
 {
     public float mouseSensitivity = 100f;
+    
     public Transform playerBody;
 
-    private float xRotation = 0f;
+    private float xRotation = 1f;
+
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
 
     void Update()
     {
